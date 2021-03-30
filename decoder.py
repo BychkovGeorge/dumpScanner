@@ -21,9 +21,14 @@ for i in range(len(times)):
 
 covert_message = ''
 for i in range(len(intervals)):
-    if 2.2 < intervals[i] < 2.3:
-        covert_message += '1'
-    elif 0.2 < intervals[i] < 0.3:
+    if intervals[i] < 1.5:
         covert_message += '0'
+    else:
+        covert_message += '1'
 
-print(covert_message)
+string = ''
+for i in range(0, len(covert_message), 8):
+    string += chr(int(covert_message[i:i + 8], 2))
+
+print(string)
+

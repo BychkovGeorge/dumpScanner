@@ -36,7 +36,7 @@ for i in range(len(intervals)):
             break
 
 fig, ax = plt.subplots()
-ax.bar(distributed_intervals, counts)
+ax.bar(distributed_intervals, counts, width=0.09)
 plt.show()
 
 # вероятность присутствия скрытого канала стремится к 100% = (1 - 0 / 12) * 100
